@@ -14,3 +14,8 @@ discovery.zen.minimum_master_nodes: 1
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
 #
 discovery.type: single-node
+
+http.cors.allow-origin: "/.*/"
+http.cors.enabled: true
+http.cors.allow-headers : 'Access-Control-Allow-Origin,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range, Authorization'
+http.cors.allow-credentials: true
