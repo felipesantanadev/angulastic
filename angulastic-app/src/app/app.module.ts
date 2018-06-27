@@ -6,16 +6,20 @@ import { AppRoutingModule } from '../app/app-routing.module';
 import { ClusterComponent } from './components/cluster/cluster.component';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EsIndexComponent } from './components/es-index/es-index.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClusterComponent
+    ClusterComponent,
+    EsIndexComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

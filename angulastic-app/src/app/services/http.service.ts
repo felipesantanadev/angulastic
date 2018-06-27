@@ -24,6 +24,12 @@ export class HttpService {
         return this.httpClient.post(this.configuration.elasticsearch_url + route, data, { headers: headers});
     }
 
+    put(route: string, data: any = null, authorize: boolean = false): Observable<any> {
+        let headers = this.configureHeaders(authorize);
+
+        return this.httpClient.put(this.configuration.elasticsearch_url + route, data, { headers: headers});
+    }
+
     private configureHeaders(authorize: boolean) : HttpHeaders{
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/json');
@@ -31,7 +37,6 @@ export class HttpService {
         if(authorize){
             headers = headers.set('Authorization', 'Bearer ');
         }
-        console.log(headers);
         return headers;
     }
 }

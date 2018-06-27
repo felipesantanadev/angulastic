@@ -12,4 +12,8 @@ export class ClusterService {
     getInstance(): Observable<ElasticsearchInstance> {
         return this.httpService.get("");
     }
+
+    getClusterHealth(): Observable<any> {
+        return this.httpService.get("_cat/health?v");
+    }
 }
