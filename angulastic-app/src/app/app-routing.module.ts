@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import {ClusterComponent} from '../app/components/cluster/cluster.component';
+import {EsIndexComponent} from '../app/components/es-index/es-index.component';
 
 const routes: Routes = [
-  { path: '', component: ClusterComponent }
+  { path: '', component: EsIndexComponent }
 ];
 
 @NgModule({

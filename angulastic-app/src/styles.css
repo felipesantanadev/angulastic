@@ -1,0 +1,9 @@
+.container-position{
+    margin-top: 4%;
+}
+
+.status {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}

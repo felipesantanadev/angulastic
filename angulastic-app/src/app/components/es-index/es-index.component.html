@@ -1,0 +1,35 @@
+<h4 class="mb-3">Elasticsearch Index</h4>
+
+<form class="needs-validation">
+  <div class="row">
+    <div class="col-md-9">
+      <label for="indexName">Index name</label>
+      <input name="createIndexName" [(ngModel)]="createIndexName" type="text" class="form-control" id="indexName" value required/>
+      <div class="invalid-feedback">Index name is required.</div>
+    </div>
+    <div class="col-md-3">
+      <button (click)="createIndex()" class="btn btn-primary" style="margin-top: 30px;">Create</button>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Documents</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let index of indices">
+          <td>{{index.id}}</td>
+          <td>{{index.index_name}}</td>
+          <td>{{index.docs_count}}</td>
+          <td><div class="status" [ngStyle]="{'background': index.health, 'margin-top': '5px', 'margin-left': '20px'}"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
